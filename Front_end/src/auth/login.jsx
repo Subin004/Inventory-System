@@ -6,6 +6,9 @@ function Login() {
         <form action="">
             
             <h1 className="text-amber-300 text-6xl" >Hello, World!</h1>
+
+            <h2>Welcome Back!!</h2>
+            <p>Please enter your credentials to access your account.</p>
         
     <div className="container items-center border-amber-500 p-4 rounded-md bg-gray-100 w-2xl "  >
 
