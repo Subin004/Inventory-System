@@ -1,28 +1,31 @@
 function Otp() {
 
     return (
-        <>
-        <form action="">
-            
-            <h1 className="text-amber-300 text-6xl" >Hello, World!</h1>
+      <>
         
-    <div className="container items-center border-amber-500 p-4 rounded-md bg-gray-100 w-2xl "  >
+          <form action="" className="w-143 h-auto border rounded-lg p-5 m-5">
 
-      <label>Enter your name:
-        <input type="text" className="border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      </label>
-<br />
-      <label>Password:
-        <input type="password" className="border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      </label>
-<br />
-      
-        <input type="button" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" value="Login" />
+                <h1 className="text-3xl">Password Reset</h1>
+            
+                <p className="text-gray-500">We sent a code to <span className="text-black">abc@gmail.com</span></p>
+                <br />
 
-      </div>
+                <div>
+                    <input type="text" className="border rounded-[10px] w-10 h-13 mr-3"/>
+                    <input type="text" className="border rounded-[10px] w-10 h-13 mr-3"/>
+                    <input type="text" className="border rounded-[10px] w-10 h-13 mr-3"/>
+                    <input type="text" className="border rounded-[10px] w-10 h-13 mr-3"/>
+                </div>
+                <br />
+                
+                <div>
+                    <button className="flex mb-3.5 w-full border rounded-lg text-white bg-black h-13 justify-center place-items-center">Continue</button>
+                    <p>Don't reveice an email? <a href="/" className="text-blue-400 underline">Click here</a></p>
+                    <p>Back to <a href="/" className="text-blue-400 underline">Login</a></p>
+                </div>
 
-        </form>
-        </>
+          </form>
+      </>
     );
 
 }
