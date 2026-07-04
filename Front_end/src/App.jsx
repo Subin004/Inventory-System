@@ -4,7 +4,6 @@ import Forgot from "./auth/forgot";
 import Reset from "./auth/reset";
 import Otp from "./auth/otp";
 import Owner from "./dashboard/owner";
-
 import {createBrowserRouter, Route, RouterProvider} from 'react-router-dom';
 
 function App() {
