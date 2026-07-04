@@ -1,27 +1,67 @@
+import {useState} from "react";
+
 function Owner() {
+
+    const [msg, setMsg] = useState("");
+     
+    const topsellingProducts = [
+        { 
+            name: "Product A", 
+            sales: 100 
+        },
+        { 
+            name: "Product B", 
+            sales: 80 
+        },
+        { 
+            name: "Product C", 
+            sales: 60 
+        },
+        { 
+            name: "Product D", 
+            sales: 40 
+        },
+        { 
+            name: "Product E", 
+            sales: 20 
+        }
+    ];
+
+    const topsellers = topsellingProducts.map((product, index) => (
+        <div key={index} className="border p-2 mb-2">
+            <li>
+                {product.name} - Sales: {product.sales}
+            </li>
+        </div>
+    ));
+
+    const hancleClick = async () => {
+        try {
+            const response = await fetch ("http://localhost:3000/home");
+
+            console.log(response);
+            const data = await response.json();
+            console.log(data);
+            
+            setMsg(data.message);
+        }
+        catch(error) {
+            console.log("ERRORRRRRRRRRRRRR!!!!!!!!");
+            console.error("Error fetching data:", error);
+        }
+    }
 
     return (
         <>
-        <form action="">
-            
-            <h1 className="text-amber-300 text-6xl" >Hello, World!</h1>
-        
-    <div className="container items-center border-amber-500 p-4 rounded-md bg-gray-100 w-2xl "  >
+            <h1>Owner Dashboard</h1>
+            <p>Welcome to the owner dashboard! Here you can manage your inventory, view sales reports, and update your profile.</p>
+            <h2>Top Sellers</h2>
+            <ul>
+                {topsellers}
+            </ul>
+            <button className="border" onClick={hancleClick}>Click me</button>
 
-      <label>Enter your name:
-        <input type="text" className="border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      </label>
-<br />
-      <label>Password:
-        <input type="password" className="border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-      </label>
-<br />
-      
-        <input type="button" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" value="Login" />
-
-      </div>
-
-        </form>
+            <p>{msg}</p>
         </>
     );
 
