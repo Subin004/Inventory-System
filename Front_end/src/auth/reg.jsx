@@ -1,33 +1,61 @@
 function Registration() {
     return (
         <>
+        <style>
+          {`
+          p{
+            font-size: 1rem;
+            color: red;
+                                    }
+          form{
+            display: flex;
+            flex-direction: bottom;
+            justify-content: center;
+            align-items:center;
+            }
+          #button{
+          border:2px solid;
+          border-radius:4px;
+          color:white;
+          background-color:black;
+          padding:4px;
+          }
+          inputField{
+          border:2px solid grey;
+          border-radius:4px;
+          }
+        
+        `}
+          
+        </style>
         <form action="">
             <p>Please enter your credentials to access your account.</p>
-        
-    <div className="container items-center border-amber-500 p-4 rounded-md bg-gray-100 w-2xl "  >
 
-      <label>Enter your name:
-        <input type="text" className="border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        
+    <div >
+
+      <label>Enter your name:<br></br>
+        <input type="text" className="inputField" />
       </label>
 <br />
-      <label>Company Name:
-        <input type="text" className="border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <label>Company Name:<br></br>
+        <input type="text"  />
       </label>
 <br />
-      <label>Email:
-        <input type="email" className="border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <label>Email:<br></br>
+        <input type="email"  />
       </label>
 <br />  
-      <label>Password:
-        <input type="password" className="border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <label>Password:<br></br>
+        <input type="password"  />
       </label>
 <br />
-      <input type="checkbox" id="remember" className="mr-2 leading-tight" />
-      <label htmlFor="remember" className="text-sm text-gray-600">I agree to </label>
-      <a href="/terms" className="text-sm text-blue-500 hover:underline">Terms and Conditions</a>
+      <input type="checkbox"  />
+      <label htmlFor="remember" >I agree to </label>
+      <a href="/terms" >Terms and Conditions</a>
 <br />
       
-        <input type="button" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" value="Register" />
+        <input type="button" id="button" value="submit"/>
 
 
       
