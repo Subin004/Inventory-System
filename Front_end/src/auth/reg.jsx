@@ -91,5 +91,7 @@ function Registration() {
   </form>
   </>
   );
+
 }
+
 export default Registration;
