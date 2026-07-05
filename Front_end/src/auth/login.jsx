@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
 
@@ -66,7 +66,7 @@ function Login() {
 
             <input type="checkbox" id="remember me" className="mr-2 leading-tight" />
             <label htmlFor="remember me" className="text-sm text-gray-600">Remember me</label>
-            <a href="forgot" className="text-sm text-blue-500 hover:underline ml-4">Forgot password?</a>
+            <Link to="/forgot" className="text-sm text-blue-500 hover:underline ml-4">Forgot password?</Link>
             <br />  
 
             <input type="button" onClick={() => {handleLogin();}} className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600" value="Login" />

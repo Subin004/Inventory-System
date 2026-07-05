@@ -4,7 +4,7 @@ function Reset() {
       
       <form action="" className="w-143 h-auto border rounded-lg p-10 m-5">
 
-            <h1 className="text-[40px] font-semibold">Set new password</h1>
+            <h1 className="">Set new password</h1>
         
             <p className="text-gray-500 text-[20px] font-semibold">Must be atleast 8 charaters long</p>
             <br />
