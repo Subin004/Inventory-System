@@ -23,20 +23,16 @@ function Registration() {
   function handlePasswordChange(event){
     setPassword(event.target.value);
   }
-
   function handleRegister(){
-
     if(name && company && email && password){
-
       const payload = {user_name: name, company_name: company, email: email, password: password};
-      
       axios.post("http://localhost:3000/api/register/", payload)
       .then((response)=>{
         console.log(response);
         if(!response.ok){
           throw Error("Registration Failed");
         }
-        return response.data; // Axios dont need the response to be converted to JSON explicitily.
+        return response.data;
       })
       .then((data)=>{
         console.log(data.msg);
@@ -51,7 +47,6 @@ function Registration() {
       console.log("Please full the fields!")
     }
   }
-
   return (
     <>
     <form>
@@ -89,6 +84,7 @@ function Registration() {
     </div>
 
   </form>
+  <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, cum facilis. Alias rerum minus cumque quasi amet odio ducimus aperiam ex. Distinctio iure expedita doloremque amet ea perspiciatis qui deserunt?</div>
   </>
   );
 
