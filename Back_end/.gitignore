@@ -1,3 +1,5 @@
 node_modules/
 .env
 uploads/
+src/config/practiceDb.mjs
+config/dbSequelize.js
